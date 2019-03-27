@@ -119,8 +119,8 @@ def compute_encoded_input_output_smiles(smiles, global_parameters, char_to_int, 
     encoded_output_smiles = np.array([[char_to_int[c] for c in s] for s in padded_output_smiles], np.uint8)
     return encoded_input_smiles, encoded_output_smiles
     
-def create_encoded_input_output_smiles(smiles, global_parameters, char_to_int):
-    encoded_input_smiles, encoded_output_smiles = compute_encoded_input_output_smiles(smiles, global_parameters, char_to_int)
+def create_encoded_input_output_smiles(smiles, global_parameters, char_to_int, max_length):
+    encoded_input_smiles, encoded_output_smiles = compute_encoded_input_output_smiles(smiles, global_parameters, char_to_int, max_length)
     np.save('preprocessed/encoded_input_smiles.npy', encoded_input_smiles)
     np.save('preprocessed/encoded_output_smiles.npy', encoded_output_smiles)
     
