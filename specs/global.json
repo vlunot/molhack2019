@@ -1,0 +1,10 @@
+{
+    "solution_file": "data/molhack_eval.solution",
+    "prediction_file": "res/molhack_eval.predict",
+    "max_length": 60,
+    "start_char": "<",
+    "end_char": ">",
+    "batch_size": 1024,
+    "min_valid_mols": 1800
+}
+    

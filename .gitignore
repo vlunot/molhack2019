@@ -1,0 +1,19 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Datasets directory
+data/
+
+# Models weights and data
+models/
+
+# Preprocessed data
+preprocessed/
+
+# Temporary data
+tmp/
+
+# Submission file and backups
+res/

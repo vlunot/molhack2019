@@ -1,0 +1,30 @@
+{
+    "names": ["model1", "model2", "model3"],
+    "model1": {
+        "num_epochs": 6,
+        "target_size": 120,
+        "latent_size": 450,
+        "embedding_size": 8,
+        "lstm_sizes": [160, 160, 160],
+        "learning_rate": 1e-3,
+        "num_iterations": 20
+    },
+    "model2": {
+        "num_epochs": 5,
+        "target_size": 142,
+        "latent_size": 550,
+        "embedding_size": 10,
+        "lstm_sizes": [192, 192, 192],
+        "learning_rate": 1e-3,
+        "num_iterations": 20
+    },
+    "model3": {
+        "num_epochs": 4,
+        "target_size": 142,
+        "latent_size": 750,
+        "embedding_size": 14,
+        "lstm_sizes": [256, 256, 256],
+        "learning_rate": 1e-3,
+        "num_iterations": 20
+    }
+}
