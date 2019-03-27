@@ -6,4 +6,7 @@ then
     rm models/*
     rm tmp/*
     rm res/*
+    echo "Finished cleaning."
+else
+    echo "Cleaning aborted."
 fi
