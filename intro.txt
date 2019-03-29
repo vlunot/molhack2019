@@ -1,0 +1,16 @@
+This Docker image contains the prototype developed by Vincent Lunot for the 
+MolHack 2019 competition.
+
+The code for generating SMILES is in the `src` directory.  
+The problem and model specifications are in the `specs` directory.  
+The data used for training and testing is in the `data` directory.  
+The generated SMILES are stored in the `res` directory.
+
+Execute:
+- `./run_all.sh` to run the entire generation process,
+- `./preprocess.sh` to run the preprocessing step,
+- `./train.sh` to train the model (requires the preprocessing files),
+- `./generate.sh` to generate the SMILES (requires the training files),
+- `./clean_all.sh` to delete all computed results.
+
+Copyright (C) 2019 Vincent Lunot
