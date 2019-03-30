@@ -203,7 +203,7 @@ def predict(global_parameters, models_parameters, test_solution,
             f.write(s + "\n")
             
     with zipfile.ZipFile(prediction_file + '.zip', 'w', zipfile.ZIP_DEFLATED) as f:
-        f.write(prediction_file)
+        f.write(prediction_file, os.path.basename(prediction_file))
         
             
 def parse_arguments():
