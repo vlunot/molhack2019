@@ -1,13 +1,13 @@
 # Vincent Lunot's MolHack 2019 prototype
 
-This Docker image contains the solution developed by Vincent Lunot for the MolHack 2019 competition. This competition was organized by Insilico Medicine and held on CodaLab from February 25th to March 31st 2019.  
-More details are available at: https://competitions.codalab.org/competitions/21716
+This Docker image contains the solution developed by Vincent Lunot for the MolHack 2019 competition. This competition was organized by Insilico Medicine and hosted on CodaLab from February 25th to March 31st 2019.  
+More details about MolHack 2019 are available at http://molhack.com/ and https://competitions.codalab.org/competitions/21716.
 
 ## Run the image
 
 Run this image with:
 ```
-docker run --runtime=nvidia -it vlunot/mh2019:v1
+docker run --runtime=nvidia -it vlunot/mh2019:v1.1
 ```
 
 ## Available commands
@@ -20,7 +20,7 @@ Once the image is started, you can type:
 - `./generate.sh` to generate the SMILES (requires the training files),
 - `./clean_all.sh` to delete all computed results.
 
-Intermediate computations were kept for further analysis. The `run_all.sh` script doesn't delete these results. If you want a full fresh start, you should use the `clean_all.sh` script first. 
+Intermediate computations were kept for further analysis. The `run_all.sh` script doesn't delete these results. If intermediate computations are available, the SMILES generation will continue where it stopped. For a full fresh start, the `clean_all.sh` script should be executed first.
 
 ## File hierarchy
 
@@ -28,7 +28,7 @@ The code for generating SMILES is in the `src` directory.
 The problem and model specifications are in the `specs` directory.  
 The data used for training and testing is in the `data` directory. Please note that the dataset from MOSES is also included and used for training.  
 The trained weights of the model are in the `models` directory.  
-The generated SMILES are stored in the `res` directory.
+The generated SMILES are stored in the `res` directory. The latest generated SMILES are in the file `molhack_eval.predict`. Previously generated SMILES are kept in the backup files `molhack_eval.predict.*`.
 
 ## Computation time
 
